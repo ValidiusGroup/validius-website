@@ -1,61 +1,673 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validius Group | Strength on your side.</title>
-    <meta name="description" content="Validius Group — A diversified global business group building value across industries.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validius Group | Strength on your side.</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#172033;
+    background:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* HEADER */
+header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding:25px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:10;
+    color:#fff;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#e21d2d;
+}
+
+nav{
+    display:flex;
+    gap:32px;
+}
+
+nav a{
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#e21d2d;
+}
+
+/* HERO */
+.hero{
+    min-height:760px;
+    display:flex;
+    align-items:center;
+    padding:140px 8%;
+    position:relative;
+    overflow:hidden;
+    color:white;
+
+    background:
+    linear-gradient(90deg,
+    rgba(3,12,28,.96),
+    rgba(3,12,28,.75),
+    rgba(3,12,28,.25)),
+    url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2200&q=85")
+    center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:780px;
+}
+
+.label{
+    color:#e21d2d;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(50px,7vw,90px);
+    line-height:1.02;
+    margin-bottom:28px;
+}
+
+.hero h1 span{
+    color:#e21d2d;
+}
+
+.hero p{
+    max-width:680px;
+    font-size:19px;
+    color:#e5e9ef;
+    margin-bottom:38px;
+}
+
+.button{
+    display:inline-block;
+    padding:15px 28px;
+    background:#e21d2d;
+    color:white;
+    font-weight:700;
+    transition:.3s;
+}
+
+.button:hover{
+    background:#fff;
+    color:#172033;
+}
+
+/* GENERAL */
+section{
+    padding:100px 8%;
+}
+
+.section-title{
+    font-size:48px;
+    line-height:1.1;
+    color:#071426;
+    margin-bottom:25px;
+}
+
+.section-text{
+    max-width:760px;
+    font-size:18px;
+    color:#687180;
+}
+
+/* ABOUT */
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.about-box{
+    background:#f4f6f9;
+    padding:45px;
+    border-left:4px solid #e21d2d;
+}
+
+.about-box h3{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+/* BUSINESSES */
+.business-section{
+    background:#f4f6f9;
+}
+
+.business-intro{
+    max-width:800px;
+    margin-bottom:55px;
+}
+
+.business-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.business-card{
+    background:#fff;
+    padding:32px 28px;
+    min-height:225px;
+    border:1px solid #e3e7ec;
+    transition:.35s;
+}
+
+.business-card:hover{
+    transform:translateY(-7px);
+    border-color:#e21d2d;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.number{
+    color:#e21d2d;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:35px;
+}
+
+.business-card h3{
+    font-size:21px;
+    color:#071426;
+    margin-bottom:10px;
+}
+
+.business-card p{
+    font-size:15px;
+    color:#687180;
+}
+
+/* STRATEGIC FOCUS */
+.focus{
+    background:#071426;
+    color:white;
+}
+
+.focus .section-title{
+    color:white;
+}
+
+.focus-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    margin-top:55px;
+}
+
+.focus-item{
+    border-top:1px solid rgba(255,255,255,.25);
+    padding-top:25px;
+}
+
+.focus-item h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.focus-item p{
+    color:#aeb7c4;
+    font-size:15px;
+}
+
+/* SUSTAINABILITY */
+.sustainability{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.sustainability-box{
+    background:#f4f6f9;
+    padding:50px;
+}
+
+.sustainability-box h3{
+    font-size:30px;
+    margin-bottom:18px;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+    background:#e21d2d;
+    color:#fff;
+}
+
+.contact h2{
+    font-size:52px;
+    margin-bottom:18px;
+}
+
+.contact p{
+    max-width:700px;
+    margin:0 auto 30px;
+    font-size:18px;
+}
+
+.contact .button{
+    background:#fff;
+    color:#071426;
+}
+
+.contact .button:hover{
+    background:#071426;
+    color:#fff;
+}
+
+/* FOOTER */
+footer{
+    background:#050d18;
+    color:#aeb7c4;
+    padding:45px 8%;
+}
+
+.footer-top{
+    display:flex;
+    justify-content:space-between;
+    padding-bottom:30px;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.footer-logo{
+    color:#fff;
+    font-size:25px;
+    font-weight:800;
+}
+
+.footer-logo span{
+    color:#e21d2d;
+}
+
+.footer-bottom{
+    padding-top:25px;
+    font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:1000px){
+
+    nav{
+        gap:15px;
+    }
+
+    .business-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .focus-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:700px){
+
+    header{
+        padding:20px 5%;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        min-height:700px;
+        padding:120px 6% 80px;
+    }
+
+    section{
+        padding:75px 6%;
+    }
+
+    .section-title{
+        font-size:38px;
+    }
+
+    .about,
+    .sustainability{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .business-grid,
+    .focus-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact h2{
+        font-size:38px;
+    }
+
+    .footer-top{
+        flex-direction:column;
+        gap:20px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Validius Group</h1>
-        <p>Strength on your side.</p>
-    </header>
+<header>
 
-    <main>
-        <section>
-            <h2>Building Value Across Industries</h2>
-            <p>
-                Validius Group is a diversified business group focused on
-                building sustainable businesses, strategic partnerships,
-                innovation and long-term value.
+    <div class="logo">
+        VALIDIUS<span>.</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#businesses">Our Businesses</a>
+        <a href="#sustainability">Sustainability</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="label">
+            Diversified Global Enterprise
+        </div>
+
+        <h1>
+            Building Value.<br>
+            <span>Across Industries.</span>
+        </h1>
+
+        <p>
+            Validius Group is a diversified business group focused on
+            creating sustainable businesses, strategic partnerships,
+            innovation and long-term value.
+        </p>
+
+        <a href="#businesses" class="button">
+            Explore Our Businesses
+        </a>
+
+    </div>
+
+</section>
+
+<section id="about">
+
+    <div class="about">
+
+        <div>
+
+            <div class="label">
+                About Validius
+            </div>
+
+            <h2 class="section-title">
+                Strength on your side.
+            </h2>
+
+            <p class="section-text">
+                Validius Group brings together businesses and emerging
+                ventures across multiple industries. Our approach combines
+                entrepreneurship, international partnerships, operational
+                excellence and long-term value creation.
             </p>
-        </section>
 
-        <section>
-            <h2>Our Businesses</h2>
+        </div>
 
+        <div class="about-box">
+
+            <h3>
+                A Group Built for Growth
+            </h3>
+
+            <p>
+                From real estate and agro processing to automotive,
+                diamond certification, jewelry, electric mobility,
+                medical tourism and future technologies, Validius
+                continues to explore opportunities across industries.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="business-section" id="businesses">
+
+    <div class="business-intro">
+
+        <div class="label">
+            Our Businesses
+        </div>
+
+        <h2 class="section-title">
+            Diverse businesses.<br>
+            One group.
+        </h2>
+
+        <p class="section-text">
+            Our portfolio connects established operations with
+            emerging opportunities across Bangladesh and international
+            markets.
+        </p>
+
+    </div>
+
+    <div class="business-grid">
+
+        <div class="business-card">
+            <div class="number">01</div>
             <h3>Bengal Homes Ltd.</h3>
             <p>Real Estate Development</p>
+        </div>
 
+        <div class="business-card">
+            <div class="number">02</div>
             <h3>Bengal Diamond</h3>
             <p>Gold & Jewelry Manufacturing</p>
+        </div>
 
+        <div class="business-card">
+            <div class="number">03</div>
             <h3>Satu Agro</h3>
             <p>Agro & Food Processing</p>
+        </div>
 
+        <div class="business-card">
+            <div class="number">04</div>
             <h3>ZAC</h3>
             <p>Automotive Parts Import & Distribution</p>
+        </div>
 
+        <div class="business-card">
+            <div class="number">05</div>
             <h3>SGL Lab Bangladesh</h3>
             <p>Diamond Testing & Certification</p>
+        </div>
 
+        <div class="business-card">
+            <div class="number">06</div>
             <h3>NEX DRIVE</h3>
-            <p>EV Charging & Electric Mobility Solutions</p>
+            <p>EV Charging & Electric Mobility</p>
+        </div>
 
+        <div class="business-card">
+            <div class="number">07</div>
             <h3>Medi Bridge</h3>
             <p>Medical Tourism</p>
+        </div>
 
+        <div class="business-card">
+            <div class="number">08</div>
             <h3>Future Technology & Ventures</h3>
             <p>Innovation & Emerging Opportunities</p>
-        </section>
-    </main>
+        </div>
 
-    <footer>
-        <p>© 2026 Validius Group. All Rights Reserved.</p>
-    </footer>
+    </div>
+
+</section>
+
+<section class="focus">
+
+    <div class="label">
+        Strategic Focus
+    </div>
+
+    <h2 class="section-title">
+        Exploring tomorrow's<br>
+        opportunities.
+    </h2>
+
+    <div class="focus-grid">
+
+        <div class="focus-item">
+            <h3>Real Estate</h3>
+            <p>Residential, commercial and future development opportunities.</p>
+        </div>
+
+        <div class="focus-item">
+            <h3>Electric Mobility</h3>
+            <p>EV charging infrastructure and emerging mobility solutions.</p>
+        </div>
+
+        <div class="focus-item">
+            <h3>Agro & Food</h3>
+            <p>Processing, value creation and food-related opportunities.</p>
+        </div>
+
+        <div class="focus-item">
+            <h3>Medical</h3>
+            <p>International healthcare access and medical tourism opportunities.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="sustainability">
+
+    <div class="sustainability">
+
+        <div>
+
+            <div class="label">
+                Sustainability
+            </div>
+
+            <h2 class="section-title">
+                Growth with<br>
+                responsibility.
+            </h2>
+
+            <p class="section-text">
+                We believe long-term business growth should create value
+                for customers, communities, partners and future generations.
+            </p>
+
+        </div>
+
+        <div class="sustainability-box">
+
+            <h3>
+                Our Perspective
+            </h3>
+
+            <p>
+                Sustainability, innovation and responsible business
+                practices are part of how we evaluate opportunities
+                and build businesses designed for long-term relevance.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="contact" id="contact">
+
+    <h2>
+        Let's Connect.
+    </h2>
+
+    <p>
+        Explore opportunities, partnerships and conversations
+        with Validius Group.
+    </p>
+
+    <a href="mailto:info@validiusbh.com" class="button">
+        Get in Touch
+    </a>
+
+</section>
+
+<footer>
+
+    <div class="footer-top">
+
+        <div>
+
+            <div class="footer-logo">
+                VALIDIUS<span>.</span>
+            </div>
+
+            <p>
+                Strength on your side.
+            </p>
+
+        </div>
+
+        <div>
+            Diversified Global Enterprise
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Validius Group. All Rights Reserved.
+    </div>
+
+</footer>
 
 </body>
 </html>
