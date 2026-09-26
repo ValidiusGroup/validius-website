@@ -166,23 +166,71 @@ section{
 
 /* ABOUT */
 
+/* ABOUT */
 .about{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px;
+    grid-template-columns:1.15fr .85fr;
+    gap:100px;
     align-items:center;
+    max-width:1400px;
+    margin:auto;
+}
+
+.about-content{
+    max-width:760px;
+}
+
+.about-content .section-title{
+    margin-bottom:28px;
+}
+
+.about-content .section-title span{
+    color:#e21d2d;
+}
+
+.about-description{
+    margin-top:20px;
 }
 
 .about-box{
-    padding:45px;
-    background:#f5f7fa;
-    border-left:4px solid #e21b2d;
+    background:#f4f6f9;
+    padding:55px;
+    border-top:4px solid #e21d2d;
+    position:relative;
+}
+
+.about-number{
+    color:#e21d2d;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:3px;
+    margin-bottom:35px;
 }
 
 .about-box h3{
-    font-size:30px;
-    margin-bottom:15px;
+    font-size:32px;
+    line-height:1.2;
     color:#071426;
+    margin-bottom:18px;
+}
+
+.about-box p{
+    color:#687180;
+    font-size:16px;
+}
+
+.about-line{
+    width:55px;
+    height:2px;
+    background:#e21d2d;
+    margin:30px 0 20px;
+}
+
+.about-small{
+    font-size:12px !important;
+    font-weight:700;
+    letter-spacing:1px;
+    color:#172033 !important;
 }
 
 /* BUSINESSES */
