@@ -1396,36 +1396,159 @@ section{
     
 /* FOOTER */
 
-footer{
-    background:#050d18;
-    color:#aeb7c4;
-    padding:45px 8%;
+/* =========================================
+   PREMIUM FOOTER
+========================================= */
+
+.premium-footer {
+    background: #071525;
+    color: #ffffff;
+    margin-top: 0;
+    position: relative;
+    overflow: hidden;
 }
 
-.footer-top{
-    display:flex;
-    justify-content:space-between;
-    gap:40px;
-    padding-bottom:30px;
-    border-bottom:1px solid rgba(255,255,255,.1);
+/* Premium red accent line */
+.premium-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #c8102e;
 }
 
-.footer-logo{
-    color:white;
-    font-size:25px;
-    font-weight:800;
+/* Footer Main */
+.footer-main {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 75px 40px 65px;
+
+    display: grid;
+    grid-template-columns: 1.7fr 1fr 1.25fr 1.35fr;
+    gap: 55px;
 }
 
-.footer-logo span{
-    color:#e21b2d;
+/* Brand */
+.footer-brand {
+    max-width: 360px;
 }
 
-.footer-bottom{
-    padding-top:25px;
-    font-size:13px;
+.footer-logo {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #ffffff;
+    margin-bottom: 8px;
 }
 
-/* MOBILE */
+.footer-logo span {
+    color: #c8102e;
+}
+
+.footer-tagline {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #b8c3d1;
+    margin-bottom: 24px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #aeb9c8;
+    margin: 0;
+}
+
+
+/* Footer Columns */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h4 {
+    position: relative;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0 0 24px;
+    padding-bottom: 12px;
+}
+
+/* Red line under headings */
+.footer-column h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 28px;
+    height: 2px;
+    background: #c8102e;
+}
+
+.footer-column a {
+    color: #aeb9c8;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    transition: all 0.25s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.footer-column p {
+    color: #aeb9c8;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 0 18px;
+}
+
+
+/* Contact */
+.footer-contact a {
+    color: #d5dce5;
+}
+
+.footer-contact a:hover {
+    color: #ffffff;
+}
+
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    max-width: 1250px;
+    margin: 0 auto;
+
+    padding: 23px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 12px;
+    color: #8290a2;
+    letter-spacing: 0.4px;
+}
+
+.footer-bottom-right {
+    color: #9ba7b6;
+}
+
+
+/* =========================================
+   MOBILE / TABLET
+========================================= */
 
 @media(max-width:1000px){
 
@@ -1441,7 +1564,28 @@ footer{
         grid-template-columns:repeat(2,1fr);
     }
 
+    /* Footer Tablet */
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 45px;
+        padding: 60px 35px;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        padding: 22px 35px;
+    }
+
 }
+
+
+/* =========================================
+   MOBILE
+========================================= */
 
 @media(max-width:700px){
 
@@ -1489,8 +1633,34 @@ footer{
         font-size:38px;
     }
 
-    .footer-top{
-        flex-direction:column;
+
+    /* Footer Mobile */
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 38px;
+        padding: 55px 25px 45px;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+    }
+
+    .footer-logo {
+        font-size: 26px;
+    }
+
+    .footer-brand p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .footer-bottom {
+        padding: 20px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        line-height: 1.6;
     }
 
 }
@@ -2407,8 +2577,6 @@ footer{
     </div>
 
 </section>
-
-<!-- FOOTER -->
 
 <!-- PREMIUM FOOTER -->
 
