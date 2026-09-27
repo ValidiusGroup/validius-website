@@ -796,21 +796,232 @@ section{
 
 /* SUSTAINABILITY */
 
-.sustainability{
+```css
+/* =========================================
+   VALIDIUS GROUP — SUSTAINABILITY
+   PREMIUM CORPORATE DESIGN
+   ========================================= */
+
+#sustainability.vg-sustainability{
+    background:#ffffff;
+    color:#071426;
+    padding:120px 6%;
+    position:relative;
+    overflow:hidden;
+}
+
+#sustainability .vg-sustainability-container{
+    max-width:1400px;
+    margin:0 auto;
+}
+
+
+/* INTRO */
+
+#sustainability .vg-sustainability-intro{
+    max-width:1050px;
+    margin-bottom:95px;
+}
+
+#sustainability .vg-sustainability-label{
+    display:inline-block;
+    margin-bottom:25px;
+    color:#e21d2d;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+#sustainability .vg-sustainability-title{
+    margin:0 0 32px;
+    font-size:clamp(54px,6vw,88px);
+    line-height:.98;
+    letter-spacing:-3px;
+    font-weight:700;
+    color:#071426;
+}
+
+#sustainability .vg-sustainability-title span{
+    color:#e21d2d;
+}
+
+#sustainability .vg-sustainability-lead{
+    max-width:850px;
+    margin:0;
+    color:#5f6978;
+    font-size:20px;
+    line-height:1.85;
+}
+
+
+/* PILLARS */
+
+#sustainability .vg-sustainability-pillars{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px;
-    align-items:center;
+    grid-template-columns:repeat(3,1fr);
+    border-top:1px solid #dfe3e8;
+    border-bottom:1px solid #dfe3e8;
 }
 
-.sustainability-box{
-    background:#f5f7fa;
-    padding:50px;
+#sustainability .vg-sustainability-pillar{
+    position:relative;
+    min-height:330px;
+    padding:42px 42px 45px;
+    border-right:1px solid #dfe3e8;
+    transition:.35s ease;
 }
 
-.sustainability-box h3{
-    font-size:30px;
-    margin-bottom:18px;
+#sustainability .vg-sustainability-pillar:first-child{
+    border-left:1px solid #dfe3e8;
+}
+
+#sustainability .vg-sustainability-pillar:hover{
+    background:#f6f7f9;
+    transform:translateY(-5px);
+}
+
+#sustainability .vg-sustainability-number{
+    margin-bottom:75px;
+    color:#e21d2d;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+#sustainability .vg-sustainability-pillar h3{
+    margin:0 0 17px;
+    max-width:300px;
+    color:#071426;
+    font-size:25px;
+    line-height:1.2;
+    letter-spacing:-.5px;
+}
+
+#sustainability .vg-sustainability-pillar p{
+    max-width:330px;
+    margin:0;
+    color:#687180;
+    font-size:15px;
+    line-height:1.75;
+}
+
+
+/* CORPORATE STATEMENT */
+
+#sustainability .vg-sustainability-statement{
+    display:grid;
+    grid-template-columns:.7fr 1.3fr;
+    gap:90px;
+    padding:105px 0 30px;
+}
+
+#sustainability .vg-sustainability-statement-label{
+    color:#e21d2d;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+#sustainability .vg-sustainability-statement-content{
+    max-width:820px;
+}
+
+#sustainability .vg-sustainability-statement-content h3{
+    margin:0 0 28px;
+    color:#071426;
+    font-size:clamp(38px,4vw,62px);
+    line-height:1.05;
+    letter-spacing:-2px;
+}
+
+#sustainability .vg-sustainability-statement-content p{
+    max-width:720px;
+    margin:0;
+    color:#687180;
+    font-size:17px;
+    line-height:1.85;
+}
+
+
+/* TABLET */
+
+@media(max-width:900px){
+
+    #sustainability.vg-sustainability{
+        padding:90px 6%;
+    }
+
+    #sustainability .vg-sustainability-pillars{
+        grid-template-columns:1fr;
+    }
+
+    #sustainability .vg-sustainability-pillar{
+        border-right:none;
+        border-bottom:1px solid #dfe3e8;
+    }
+
+    #sustainability .vg-sustainability-pillar:first-child{
+        border-left:none;
+    }
+
+    #sustainability .vg-sustainability-pillar:last-child{
+        border-bottom:none;
+    }
+
+    #sustainability .vg-sustainability-statement{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    #sustainability.vg-sustainability{
+        padding:75px 5%;
+    }
+
+    #sustainability .vg-sustainability-intro{
+        margin-bottom:65px;
+    }
+
+    #sustainability .vg-sustainability-title{
+        font-size:48px;
+        letter-spacing:-2px;
+    }
+
+    #sustainability .vg-sustainability-lead{
+        font-size:17px;
+        line-height:1.75;
+    }
+
+    #sustainability .vg-sustainability-pillar{
+        min-height:auto;
+        padding:35px 28px 40px;
+    }
+
+    #sustainability .vg-sustainability-number{
+        margin-bottom:55px;
+    }
+
+    #sustainability .vg-sustainability-statement{
+        padding:75px 0 20px;
+    }
+
+    #sustainability .vg-sustainability-statement-content h3{
+        font-size:40px;
+        letter-spacing:-1.5px;
+    }
+
+    #sustainability .vg-sustainability-statement-content p{
+        font-size:16px;
+    }
+
 }
 
 /* CTA */
