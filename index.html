@@ -2140,14 +2140,13 @@ footer{
 
 <!-- CONTACT CTA -->
 
-```html
 <!-- CONTACT -->
 
 <section id="contact" class="vg-contact">
 
     <div class="vg-contact-container">
 
-        <!-- CONTACT INTRO -->
+        <!-- INTRO -->
 
         <div class="vg-contact-intro">
 
@@ -2176,17 +2175,18 @@ footer{
         <div class="vg-contact-grid">
 
 
-            <!-- MESSAGE FORM -->
+            <!-- FORM -->
 
             <div class="vg-contact-form-area">
 
+                <div class="vg-contact-small-label">
+                    Share Your Idea
+                </div>
+
                 <div class="vg-contact-form-heading">
-                    <div class="vg-contact-small-label">
-                        Share Your Idea
-                    </div>
 
                     <h3>
-                        Tell us about your<br>
+                        Tell us about your
                         opportunity.
                     </h3>
 
@@ -2194,24 +2194,14 @@ footer{
                         Share your business idea, proposal or partnership
                         opportunity with our team.
                     </p>
+
                 </div>
 
 
                 <form class="vg-contact-form"
-                      action="https://formsubmit.co/validiusbusiness@gmail.com"
-                      method="POST">
-
-                    <input type="hidden" name="_subject"
-                           value="New Business Opportunity — Validius Group">
-
-                    <input type="hidden" name="_captcha"
-                           value="true">
-
-                    <input type="hidden" name="_template"
-                           value="table">
-
-                    <input type="hidden" name="_next"
-                           value="https://validiusbh.com/">
+                      action="mailto:validiusbusiness@gmail.com"
+                      method="post"
+                      enctype="text/plain">
 
                     <div class="vg-form-row">
 
@@ -2221,11 +2211,13 @@ footer{
                                 Full Name
                             </label>
 
-                            <input type="text"
-                                   id="name"
-                                   name="name"
-                                   placeholder="Your name"
-                                   required>
+                            <input
+                                type="text"
+                                id="name"
+                                name="Full Name"
+                                placeholder="Your full name"
+                                required
+                            >
 
                         </div>
 
@@ -2236,10 +2228,12 @@ footer{
                                 Company / Organization
                             </label>
 
-                            <input type="text"
-                                   id="company"
-                                   name="company"
-                                   placeholder="Company name">
+                            <input
+                                type="text"
+                                id="company"
+                                name="Company / Organization"
+                                placeholder="Company or organization"
+                            >
 
                         </div>
 
@@ -2254,11 +2248,13 @@ footer{
                                 Email Address
                             </label>
 
-                            <input type="email"
-                                   id="email"
-                                   name="email"
-                                   placeholder="you@example.com"
-                                   required>
+                            <input
+                                type="email"
+                                id="email"
+                                name="Email Address"
+                                placeholder="your@email.com"
+                                required
+                            >
 
                         </div>
 
@@ -2269,10 +2265,12 @@ footer{
                                 Phone Number
                             </label>
 
-                            <input type="tel"
-                                   id="phone"
-                                   name="phone"
-                                   placeholder="+880">
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="Phone Number"
+                                placeholder="+880"
+                            >
 
                         </div>
 
@@ -2285,18 +2283,28 @@ footer{
                             Your Idea / Proposal
                         </label>
 
-                        <textarea id="message"
-                                  name="message"
-                                  rows="7"
-                                  placeholder="Tell us about your idea, business opportunity or partnership proposal..."
-                                  required></textarea>
+                        <textarea
+                            id="message"
+                            name="Your Idea / Proposal"
+                            placeholder="Tell us about your idea, business proposal or partnership opportunity..."
+                            required
+                        ></textarea>
 
                     </div>
 
 
-                    <button type="submit" class="vg-contact-submit">
-                        Submit Your Proposal
-                        <span>→</span>
+                    <button
+                        type="submit"
+                        class="vg-contact-submit"
+                    >
+                        <span>
+                            Submit Your Proposal
+                        </span>
+
+                        <span>
+                            →
+                        </span>
+
                     </button>
 
                 </form>
@@ -2312,6 +2320,8 @@ footer{
                     Connect With Validius
                 </div>
 
+
+                <!-- EMAIL -->
 
                 <div class="vg-contact-detail">
 
@@ -2334,6 +2344,8 @@ footer{
                 </div>
 
 
+                <!-- PHONE -->
+
                 <div class="vg-contact-detail">
 
                     <div class="vg-contact-detail-number">
@@ -2354,6 +2366,8 @@ footer{
 
                 </div>
 
+
+                <!-- OFFICE -->
 
                 <div class="vg-contact-detail">
 
@@ -2378,6 +2392,8 @@ footer{
 
                 </div>
 
+
+                <!-- CLOSING MESSAGE -->
 
                 <div class="vg-contact-note">
 
