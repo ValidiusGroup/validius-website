@@ -114,6 +114,27 @@ nav a:hover{
     color:#e21b2d;
 }
 
+.hero-tagline{
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:1px;
+    color:#ffffff;
+    margin-bottom:24px;
+    position:relative;
+    padding-left:18px;
+}
+
+.hero-tagline::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+    width:4px;
+    height:24px;
+    background:#e21d2d;
+}
+    
 .hero p{
     font-size:20px;
     max-width:650px;
@@ -495,7 +516,7 @@ footer{
 
     <div class="hero-content">
 
-        <div class="hero-label">
+        <div class="label">
             Diversified Global Enterprise
         </div>
 
@@ -504,13 +525,17 @@ footer{
             <span>Across Industries.</span>
         </h1>
 
+        <div class="hero-tagline">
+            Strength on your side.
+        </div>
+
         <p>
-            Validius Group is a diversified business group focused on
-            creating sustainable businesses, strategic partnerships,
-            innovation and long-term value.
+            Validius Group is a diversified business group building
+            sustainable businesses, strategic partnerships, innovation
+            and long-term value across industries and markets.
         </p>
 
-        <a href="#business" class="btn">
+        <a href="#businesses" class="button">
             Explore Our Businesses
         </a>
 
