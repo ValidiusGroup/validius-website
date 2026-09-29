@@ -1,1 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>News & Insights | Validius Group</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #0b1f3a;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    background: rgba(255,255,255,0.97);
+    border-bottom: 1px solid #e9edf2;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1250px;
+    margin: auto;
+    min-height: 82px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #0b1f3a;
+}
+
+.logo span {
+    color: #c8102e;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #172b45;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #c8102e;
+}
+
+/* HERO */
+.news-hero {
+    min-height: 460px;
+    background:
+        linear-gradient(rgba(7,27,51,0.86), rgba(7,27,51,0.92)),
+        url("https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 25px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero-label {
+    color: #e63946;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.news-hero h1 {
+    color: #ffffff;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+    margin-bottom: 22px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.news-hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #dce5ef;
+    font-size: 18px;
+}
+
+/* INTRO */
+.intro {
+    max-width: 900px;
+    margin: auto;
+    padding: 85px 25px 55px;
+    text-align: center;
+}
+
+.intro-label {
+    color: #c8102e;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.intro h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    color: #0b1f3a;
+}
+
+.intro p {
+    color: #64748b;
+    font-size: 17px;
+}
+
+/* NEWS GRID */
+.news-section {
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px 30px 100px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.news-card {
+    background: #ffffff;
+    border: 1px solid #e6ebf0;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 45px rgba(11,31,58,0.10);
+}
+
+.card-image {
+    height: 210px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content {
+    padding: 27px;
+}
+
+.card-category {
+    color: #c8102e;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.card-content h3 {
+    color: #0b1f3a;
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    color: #697586;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.read-more {
+    color: #0b1f3a;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.read-more:hover {
+    color: #c8102e;
+}
+
+/* FEATURED */
+.featured {
+    max-width: 1250px;
+    margin: 0 auto 100px;
+    padding: 0 30px;
+}
+
+.featured-box {
+    background: #f5f7fa;
+    border-radius: 18px;
+    padding: 55px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.featured-label {
+    color: #c8102e;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.featured h2 {
+    color: #0b1f3a;
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.featured p {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.featured-button {
+    display: inline-block;
+    background: #0b1f3a;
+    color: #ffffff;
+    padding: 13px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.featured-button:hover {
+    background: #c8102e;
+}
+
+.featured-image {
+    min-height: 300px;
+    border-radius: 12px;
+    background:
+        url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85")
+        center/cover no-repeat;
+}
+
+/* FOOTER */
+footer {
+    background: #071b33;
+    color: #ffffff;
+    padding: 65px 30px 30px;
+}
+
+.footer-inner {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 60px;
+}
+
+.footer-logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.footer-logo span {
+    color: #e63946;
+}
+
+.footer-tagline {
+    color: #b8c5d4;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.footer-title {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 17px;
+}
+
+.footer-text {
+    color: #b8c5d4;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    max-width: 1250px;
+    margin: 45px auto 0;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    color: #91a1b3;
+    font-size: 12px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+
+    nav {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .featured-box {
+        grid-template-columns: 1fr;
+        padding: 35px;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 0 18px;
+        min-height: 70px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .news-hero {
+        min-height: 400px;
+    }
+
+    .news-hero h1 {
+        font-size: 43px;
+    }
+
+    .news-hero p {
+        font-size: 15px;
+    }
+
+    .intro {
+        padding-top: 60px;
+    }
+
+    .intro h2 {
+        font-size: 30px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-section,
+    .featured {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .featured-box {
+        padding: 28px;
+    }
+
+    .featured h2 {
+        font-size: 29px;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="navbar">
+
+        <a href="index.html" class="logo">
+            VALIDIUS<span>.</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#businesses">Our Businesses</a>
+            <a href="index.html#sustainability">Sustainability</a>
+            <a href="news.html" class="active">News & Insights</a>
+            <a href="index.html#contact">Contact Us</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+<section class="news-hero">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            Validius Group
+        </div>
+
+        <h1>
+            News & Insights
+        </h1>
+
+        <p>
+            Discover the latest developments, company updates,
+            opportunities and insights from across Validius Group.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+<section class="intro">
+
+    <div class="intro-label">
+        Inside Validius
+    </div>
+
+    <h2>
+        Perspectives, Progress & Possibilities
+    </h2>
+
+    <p>
+        Stay connected with the latest news, business developments,
+        opportunities and stories shaping the journey of Validius Group.
+    </p>
+
+</section>
+
+
+<!-- NEWS -->
+<section class="news-section">
+
+    <div class="news-grid">
+
+        <!-- CARD 1 -->
+        <article class="news-card">
+
+            <div class="card-image"
+            style="background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1000&q=85');">
+            </div>
+
+            <div class="card-content">
+
+                <div class="card-category">
+                    Company News
+                </div>
+
+                <h3>
+                    Building New Opportunities Across Industries
+                </h3>
+
+                <p>
+                    Follow the latest developments and milestones
+                    across the Validius Group.
+                </p>
+
+                <a href="#" class="read-more">
+                    Read More →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- CARD 2 -->
+        <article class="news-card">
+
+            <div class="card-image"
+            style="background-image:url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85');">
+            </div>
+
+            <div class="card-content">
+
+                <div class="card-category">
+                    Careers
+                </div>
+
+                <h3>
+                    Career Opportunities at Validius
+                </h3>
+
+                <p>
+                    Explore future job opportunities and professional
+                    growth opportunities within our businesses.
+                </p>
+
+                <a href="#" class="read-more">
+                    View Opportunities →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- CARD 3 -->
+        <article class="news-card">
+
+            <div class="card-image"
+            style="background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85');">
+            </div>
+
+            <div class="card-content">
+
+                <div class="card-category">
+                    Business Update
+                </div>
+
+                <h3>
+                    Expanding Our Business Ecosystem
+                </h3>
+
+                <p>
+                    Updates from our diverse portfolio of businesses
+                    and emerging ventures.
+                </p>
+
+                <a href="#" class="read-more">
+                    Read More →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- CARD 4 -->
+        <article class="news-card">
+
+            <div class="card-image"
+            style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85');">
+            </div>
+
+            <div class="card-content">
+
+                <div class="card-category">
+                    Events
+                </div>
+
+                <h3>
+                    Events & Corporate Activities
+                </h3>
+
+                <p>
+                    Explore moments, events and activities from
+                    across the Validius Group.
+                </p>
+
+                <a href="#" class="read-more">
+                    View Updates →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- CARD 5 -->
+        <article class="news-card">
+
+            <div class="card-image"
+            style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85');">
+            </div>
+
+            <div class="card-content">
+
+                <div class="card-category">
+                    Insights
+                </div>
+
+                <h3>
+                    Ideas That Shape Tomorrow
+                </h3>
+
+                <p>
+                    Perspectives on innovation, markets, technology
+                    and emerging opportunities.
+                </p>
+
+                <a href="#" class="read-more">
+                    Explore Insights →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- CARD 6 -->
+        <article class="news-card">
+
+            <div class="card-image"
+            style="background-image:url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=85');">
+            </div>
+
+            <div class="card-content">
+
+                <div class="card-category">
+                    Media
+                </div>
+
+                <h3>
+                    Photos, Videos & Media
+                </h3>
+
+                <p>
+                    Discover selected visual stories and media
+                    from Validius Group.
+                </p>
+
+                <a href="#" class="read-more">
+                    Explore Media →
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURED -->
+<section class="featured">
+
+    <div class="featured-box">
+
+        <div>
+
+            <div class="featured-label">
+                Validius Perspective
+            </div>
+
+            <h2>
+                Creating Value Today. Building for Tomorrow.
+            </h2>
+
+            <p>
+                Validius Group continues to explore new opportunities,
+                strategic partnerships and emerging industries with
+                a long-term perspective.
+            </p>
+
+            <a href="index.html#contact" class="featured-button">
+                Connect With Us
+            </a>
+
+        </div>
+
+        <div class="featured-image"></div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-inner">
+
+        <div>
+
+            <div class="footer-logo">
+                VALIDIUS<span>.</span>
+            </div>
+
+            <div class="footer-tagline">
+                Strength on your side.
+            </div>
+
+            <div class="footer-text">
+                A diversified global enterprise building value
+                across industries.
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <div class="footer-title">
+                Contact
+            </div>
+
+            <div class="footer-text">
+                +880 01616 766155
+            </div>
+
+            <div class="footer-text">
+                validiusbusiness@gmail.com
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <div class="footer-title">
+                Corporate Office
+            </div>
+
+            <div class="footer-text">
+                Block #C, Road #17, House #67,
+                Level #3, Banani C/A,
+                Dhaka - 1213, Bangladesh
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+        © 2026 Validius Group. All Rights Reserved.
+    </div>
+
+</footer>
+
+</body>
+</html>
