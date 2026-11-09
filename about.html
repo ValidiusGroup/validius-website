@@ -1,1 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Validius Group</title>
+<meta name="description" content="Discover Validius Group, a diversified global enterprise building value across industries.">
 
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#10243e;background:#fff;line-height:1.7}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #e8edf2}
+.navbar{max-width:1250px;margin:auto;min-height:82px;padding:0 30px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:27px;font-weight:800;letter-spacing:2px;color:#0b1f3a}
+.logo span,.footer-logo span{color:#c8102e}
+nav{display:flex;align-items:center;gap:27px}
+nav a{font-size:14px;font-weight:600;color:#26384e;transition:.3s}
+nav a:hover,nav a.active{color:#c8102e}
+.menu-toggle{display:none;background:none;border:0;font-size:28px;color:#0b1f3a;cursor:pointer}
+.hero{min-height:440px;background:linear-gradient(100deg,rgba(5,23,44,.94),rgba(5,23,44,.72)),url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=85") center/cover;display:flex;align-items:center}
+.hero-content{max-width:1250px;width:100%;margin:auto;padding:80px 30px;color:#fff}
+.eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#ed4558;font-weight:700;margin-bottom:18px}
+.hero h1{font-size:clamp(42px,6vw,68px);line-height:1.12;max-width:800px;margin-bottom:22px}
+.hero p{font-size:18px;color:#d5dfeb;max-width:700px}
+.container{max-width:1200px;margin:auto;padding:90px 30px}
+.section-label{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#c8102e;font-weight:700;margin-bottom:14px}
+h2{font-size:clamp(30px,4vw,42px);line-height:1.2;color:#0b1f3a;margin-bottom:22px}
+.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:65px;align-items:center}
+.intro-text p,.vision-card p,.chairman-text p{color:#66758a;font-size:16px;margin-bottom:18px}
+.intro-image{min-height:390px;border-radius:12px;background:url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85") center/cover}
+.values{background:#f5f7fa}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:38px}
+.value-card{background:#fff;padding:35px 30px;border:1px solid #e8edf2;border-radius:10px}
+.value-number{font-size:13px;color:#c8102e;font-weight:700;letter-spacing:2px;margin-bottom:18px}
+.value-card h3{font-size:22px;color:#0b1f3a;margin-bottom:12px}
+.value-card p{font-size:14px;color:#68778a}
+.chairman-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px;align-items:center}
+.chairman-image img{width:100%;max-width:420px;display:block;object-fit:cover;border-radius:10px}
+.chairman-role{color:#c8102e;font-weight:700;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:15px}
+.chairman-text h2{margin-bottom:8px}
+.sectors{background:#071b33;color:#fff}
+.sectors h2{color:#fff}
+.sector-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:35px}
+.sector{padding:25px 20px;border:1px solid rgba(255,255,255,.18);border-radius:8px;font-size:16px;font-weight:600;color:#e2eaf3}
+.sector span{display:block;color:#e63946;font-size:12px;letter-spacing:2px;margin-bottom:12px}
+.closing{text-align:center;padding:85px 25px}
+.closing p{color:#68778a;max-width:700px;margin:0 auto 25px}
+.contact-button{display:inline-block;background:#0b1f3a;color:#fff;padding:14px 28px;border-radius:4px;font-size:13px;font-weight:700;transition:.3s}
+.contact-button:hover{background:#c8102e}
+footer{background:#071b33;color:#fff;padding:65px 30px 25px}
+.footer-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:55px}
+.footer-logo{font-size:25px;font-weight:800;letter-spacing:2px;margin-bottom:14px}
+.footer-tagline{color:#b8c5d4;margin-bottom:15px;font-size:14px}
+.footer-title{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:17px}
+.footer-text{font-size:14px;color:#b8c5d4;margin-bottom:9px}
+.footer-bottom{max-width:1200px;margin:40px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.15);font-size:12px;color:#91a1b3}
+@media(max-width:900px){
+nav{gap:13px}nav a{font-size:12px}
+.intro-grid,.chairman-grid{gap:35px}
+.sector-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+.navbar{min-height:70px;padding:0 20px}
+.logo{font-size:23px}
+.menu-toggle{display:block}
+nav{display:none;position:absolute;top:70px;left:0;width:100%;background:#fff;padding:15px 22px 22px;flex-direction:column;align-items:flex-start;gap:0;border-bottom:1px solid #e8edf2;box-shadow:0 12px 20px rgba(0,0,0,.06)}
+nav.open{display:flex}
+nav a{font-size:14px;width:100%;padding:12px 0;border-bottom:1px solid #f0f2f5}
+.hero{min-height:390px}
+.hero-content{padding:65px 22px}
+.hero p{font-size:15px}
+.container{padding:65px 22px}
+.intro-grid,.chairman-grid{grid-template-columns:1fr}
+.intro-image{min-height:260px;order:2}
+.values-grid{grid-template-columns:1fr}
+.sector-grid{grid-template-columns:1fr 1fr;gap:10px}
+.sector{padding:18px 13px;font-size:14px}
+.footer-inner{grid-template-columns:1fr;gap:30px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="navbar">
+<a href="index.html" class="logo">VALIDIUS<span>.</span></a>
+<button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+<nav id="mainNav">
+<a href="index.html">Home</a>
+<a href="about.html" class="active">About Us</a>
+<a href="businesses.html">Our Businesses</a>
+<a href="sustainability.html">Sustainability</a>
+<a href="news.html">News & Insights</a>
+<a href="contact.html">Contact Us</a>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<div class="eyebrow">About Validius Group</div>
+<h1>Building Value.<br>Across Industries.</h1>
+<p>A diversified enterprise driven by ambition, innovation and a long-term vision for sustainable growth.</p>
+</div>
+</section>
+
+<section class="container">
+<div class="intro-grid">
+<div class="intro-text">
+<div class="section-label">Who We Are</div>
+<h2>A Vision Beyond Boundaries</h2>
+<p>Validius Group is a diversified business group focused on building value across industries through strategic development, responsible business practices and long-term partnerships.</p>
+<p>With interests spanning multiple sectors, we seek to identify opportunities, develop capabilities and create meaningful value for our partners, customers and communities.</p>
+<p>Our approach is guided by a commitment to progress, integrity and a forward-looking business vision.</p>
+</div>
+<div class="intro-image"></div>
+</div>
+</section>
+
+<section class="values">
+<div class="container">
+<div class="section-label">Our Foundation</div>
+<h2>Vision, Mission & Values</h2>
+<div class="values-grid">
+<div class="value-card">
+<div class="value-number">01 / OUR VISION</div>
+<h3>Think Beyond Today</h3>
+<p>To build a respected global enterprise that creates lasting value and contributes to progress across industries.</p>
+</div>
+<div class="value-card">
+<div class="value-number">02 / OUR MISSION</div>
+<h3>Turn Opportunities Into Value</h3>
+<p>To develop businesses, build trusted partnerships and pursue opportunities through innovation, excellence and responsible growth.</p>
+</div>
+<div class="value-card">
+<div class="value-number">03 / OUR VALUES</div>
+<h3>Lead With Integrity</h3>
+<p>Integrity, commitment, innovation, excellence and responsibility guide the way we work and grow.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="container">
+<div class="chairman-grid">
+<div class="chairman-image">
+<img src="ceo-sir.jpg" alt="Founder and Chairman of Validius Group">
+</div>
+<div class="chairman-text">
+<div class="section-label">Leadership</div>
+<div class="chairman-role">Founder & Chairman</div>
+<h2>Fahad Kamal Lincon</h2>
+<p>With a vision for business development and long-term growth, Fahad Kamal Lincon leads Validius Group's journey towards building a diversified enterprise.</p>
+<p>His ambition is to explore new opportunities, strengthen business foundations and create value across industries through strategic thinking and entrepreneurship.</p>
+</div>
+</div>
+</section>
+
+<section class="sectors">
+<div class="container">
+<div class="section-label">Our Focus</div>
+<h2>Areas of Strategic Interest</h2>
+<p style="color:#bdc9d8;max-width:700px">We continue to explore opportunities across established industries and emerging sectors.</p>
+<div class="sector-grid">
+<div class="sector"><span>01</span>Real Estate</div>
+<div class="sector"><span>02</span>Medical</div>
+<div class="sector"><span>03</span>Agro</div>
+<div class="sector"><span>04</span>Electric Mobility & Charging</div>
+</div>
+</div>
+</section>
+
+<section class="closing">
+<div class="section-label">Our Journey</div>
+<h2>Creating Value Today.<br>Building for Tomorrow.</h2>
+<p>We believe in building strong foundations, embracing opportunities and creating meaningful progress through every venture.</p>
+<a href="contact.html" class="contact-button">Connect With Us</a>
+</section>
+
+<footer>
+<div class="footer-inner">
+<div>
+<div class="footer-logo">VALIDIUS<span>.</span></div>
+<div class="footer-tagline">Strength on your side.</div>
+<div class="footer-text">A diversified global enterprise building value across industries.</div>
+</div>
+<div>
+<div class="footer-title">Contact</div>
+<div class="footer-text">+880 01616 766155</div>
+<div class="footer-text">validiusbusiness@gmail.com</div>
+</div>
+<div>
+<div class="footer-title">Corporate Office</div>
+<div class="footer-text">Block #C, Road #17, House #67,<br>Level #3, Banani C/A,<br>Dhaka - 1213, Bangladesh</div>
+</div>
+</div>
+<div class="footer-bottom">© 2026 Validius Group. All Rights Reserved.</div>
+</footer>
+
+<script>
+const menuToggle=document.getElementById("menuToggle");
+const mainNav=document.getElementById("mainNav");
+menuToggle.addEventListener("click",()=>{
+const isOpen=mainNav.classList.toggle("open");
+menuToggle.setAttribute("aria-expanded",isOpen);
+menuToggle.textContent=isOpen?"✕":"☰";
+});
+</script>
+
+</body>
+</html>
