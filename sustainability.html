@@ -1,1 +1,263 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sustainability | Validius Group</title>
+<meta name="description" content="Discover Validius Group's commitment to responsible business, sustainable development and a better future.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#10243e;background:#fff;line-height:1.7}
+a{text-decoration:none;color:inherit}
+
+header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #e8edf2}
+.navbar{max-width:1250px;margin:auto;min-height:82px;padding:0 30px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:27px;font-weight:800;letter-spacing:2px;color:#0b1f3a}
+.logo span,.footer-logo span{color:#c8102e}
+nav{display:flex;align-items:center;gap:27px}
+nav a{font-size:14px;font-weight:600;color:#26384e;transition:.3s}
+nav a:hover,nav a.active{color:#c8102e}
+.menu-toggle{display:none;background:none;border:0;font-size:28px;color:#0b1f3a;cursor:pointer}
+
+.hero{
+min-height:440px;
+background:linear-gradient(100deg,rgba(5,23,44,.93),rgba(5,23,44,.65)),
+url("https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1800&q=85") center/cover;
+display:flex;align-items:center
+}
+.hero-content{max-width:1250px;width:100%;margin:auto;padding:80px 30px;color:#fff}
+.eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#ed4558;font-weight:700;margin-bottom:18px}
+.hero h1{font-size:clamp(42px,6vw,68px);line-height:1.12;max-width:850px;margin-bottom:22px}
+.hero p{font-size:18px;color:#d5dfeb;max-width:700px}
+
+.container{max-width:1200px;margin:auto;padding:85px 30px}
+.section-label{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#c8102e;font-weight:700;margin-bottom:14px}
+h2{font-size:clamp(30px,4vw,42px);line-height:1.2;color:#0b1f3a;margin-bottom:22px}
+
+.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.intro-text p{color:#68778a;font-size:16px;margin-bottom:18px}
+.intro-image{min-height:390px;border-radius:10px;background:url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=85") center/cover}
+
+.pillars{background:#f5f7fa}
+.pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
+.pillar-card{background:#fff;padding:32px 27px;border:1px solid #e8edf2;border-radius:9px}
+.pillar-number{font-size:13px;color:#c8102e;font-weight:700;letter-spacing:2px;margin-bottom:17px}
+.pillar-card h3{font-size:21px;color:#0b1f3a;margin-bottom:12px}
+.pillar-card p{font-size:14px;color:#68778a}
+
+.initiatives{display:grid;grid-template-columns:repeat(2,1fr);gap:25px;margin-top:35px}
+.initiative{border:1px solid #e8edf2;border-radius:9px;overflow:hidden}
+.initiative img{width:100%;height:230px;object-fit:cover;display:block}
+.initiative-content{padding:27px}
+.initiative-content h3{font-size:22px;color:#0b1f3a;margin-bottom:12px}
+.initiative-content p{font-size:14px;color:#68778a}
+
+.commitment{background:#071b33;color:#fff;padding:85px 30px}
+.commitment-inner{max-width:1000px;margin:auto;text-align:center}
+.commitment h2{color:#fff}
+.commitment p{color:#bdc9d8;font-size:16px;max-width:780px;margin:auto}
+
+.closing{text-align:center;padding:85px 25px}
+.closing p{color:#68778a;max-width:700px;margin:0 auto 25px}
+.contact-button{display:inline-block;background:#0b1f3a;color:#fff;padding:14px 28px;border-radius:4px;font-size:13px;font-weight:700;transition:.3s}
+.contact-button:hover{background:#c8102e}
+
+footer{background:#071b33;color:#fff;padding:65px 30px 25px}
+.footer-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:55px}
+.footer-logo{font-size:25px;font-weight:800;letter-spacing:2px;margin-bottom:14px}
+.footer-tagline{color:#b8c5d4;margin-bottom:15px;font-size:14px}
+.footer-title{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:17px}
+.footer-text{font-size:14px;color:#b8c5d4;margin-bottom:9px}
+.footer-bottom{max-width:1200px;margin:40px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.15);font-size:12px;color:#91a1b3}
+
+@media(max-width:900px){
+nav{gap:13px}
+nav a{font-size:12px}
+.intro-grid{gap:35px}
+.pillar-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+.navbar{min-height:70px;padding:0 20px}
+.logo{font-size:23px}
+.menu-toggle{display:block}
+nav{display:none;position:absolute;top:70px;left:0;width:100%;background:#fff;padding:15px 22px 22px;flex-direction:column;align-items:flex-start;gap:0;border-bottom:1px solid #e8edf2;box-shadow:0 12px 20px rgba(0,0,0,.06)}
+nav.open{display:flex}
+nav a{font-size:14px;width:100%;padding:12px 0;border-bottom:1px solid #f0f2f5}
+.hero{min-height:390px}
+.hero-content{padding:65px 22px}
+.hero p{font-size:15px}
+.container{padding:65px 22px}
+.intro-grid{grid-template-columns:1fr}
+.intro-image{min-height:260px}
+.pillar-grid,.initiatives{grid-template-columns:1fr}
+.commitment{padding:65px 22px}
+.footer-inner{grid-template-columns:1fr;gap:30px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="navbar">
+<a href="index.html" class="logo">VALIDIUS<span>.</span></a>
+<button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+<nav id="mainNav">
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="businesses.html">Our Businesses</a>
+<a href="sustainability.html" class="active">Sustainability</a>
+<a href="news.html">News & Insights</a>
+<a href="contact.html">Contact Us</a>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<div class="eyebrow">Sustainability at Validius</div>
+<h1>Progress With<br>Purpose.</h1>
+<p>Building a better future through responsible business, innovation and a long-term commitment to sustainable development.</p>
+</div>
+</section>
+
+<section class="container">
+<div class="intro-grid">
+<div class="intro-text">
+<div class="section-label">Our Approach</div>
+<h2>Creating Value Beyond Business.</h2>
+<p>At Validius Group, we believe that long-term business success goes hand in hand with responsible growth and a positive contribution to society.</p>
+<p>Our sustainability approach focuses on exploring responsible business opportunities, supporting efficient resource use and encouraging innovation across our areas of interest.</p>
+<p>We aim to build a business culture that considers environmental responsibility, economic progress and the well-being of communities.</p>
+</div>
+<div class="intro-image"></div>
+</div>
+</section>
+
+<section class="pillars">
+<div class="container">
+<div class="section-label">Our Priorities</div>
+<h2>Three Pillars of Sustainability.</h2>
+
+<div class="pillar-grid">
+
+<div class="pillar-card">
+<div class="pillar-number">01 / ENVIRONMENT</div>
+<h3>Environmental Responsibility</h3>
+<p>Encouraging responsible resource management, environmental awareness and opportunities that support a cleaner and more sustainable future.</p>
+</div>
+
+<div class="pillar-card">
+<div class="pillar-number">02 / ECONOMY</div>
+<h3>Sustainable Growth</h3>
+<p>Building strong business foundations, developing long-term partnerships and pursuing opportunities that create lasting economic value.</p>
+</div>
+
+<div class="pillar-card">
+<div class="pillar-number">03 / SOCIETY</div>
+<h3>Social Responsibility</h3>
+<p>Supporting responsible business practices, professional development and meaningful relationships with the communities around us.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="container">
+<div class="section-label">Areas of Focus</div>
+<h2>Moving Towards a Sustainable Future.</h2>
+<p style="color:#68778a;max-width:750px">We see opportunities to contribute to sustainability through innovation and responsible development across several important sectors.</p>
+
+<div class="initiatives">
+
+<div class="initiative">
+<img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1000&q=85" alt="Solar energy panels">
+<div class="initiative-content">
+<h3>Clean Energy & Green Technology</h3>
+<p>Exploring renewable energy, solar solutions, energy efficiency and green technology opportunities that can support a cleaner energy future.</p>
+</div>
+</div>
+
+<div class="initiative">
+<img src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?auto=format&fit=crop&w=1000&q=85" alt="Green agriculture">
+<div class="initiative-content">
+<h3>Sustainable Agriculture</h3>
+<p>Encouraging agricultural development, responsible processing and better utilisation of agricultural resources and by-products.</p>
+</div>
+</div>
+
+<div class="initiative">
+<img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1000&q=85" alt="Electric vehicle">
+<div class="initiative-content">
+<h3>Electric Mobility</h3>
+<p>Exploring electric vehicle solutions and charging infrastructure to contribute to the development of cleaner transportation.</p>
+</div>
+</div>
+
+<div class="initiative">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85" alt="Modern sustainable buildings">
+<div class="initiative-content">
+<h3>Responsible Urban Development</h3>
+<p>Promoting thoughtful development opportunities with a focus on quality, long-term value and responsible urban growth.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="commitment">
+<div class="commitment-inner">
+<div class="section-label">Our Commitment</div>
+<h2>Building Today. Protecting Tomorrow.</h2>
+<p>We recognise that sustainability is a continuous journey. As Validius Group grows, we aim to strengthen our responsible business practices, explore meaningful solutions and create value for future generations.</p>
+</div>
+</section>
+
+<section class="closing">
+<div class="section-label">A Better Tomorrow</div>
+<h2>Growth With Responsibility.</h2>
+<p>We believe that meaningful progress is built through responsible decisions, innovation and a shared commitment to the future.</p>
+<a href="contact.html" class="contact-button">Connect With Us</a>
+</section>
+
+<footer>
+<div class="footer-inner">
+
+<div>
+<div class="footer-logo">VALIDIUS<span>.</span></div>
+<div class="footer-tagline">Strength on your side.</div>
+<div class="footer-text">A diversified global enterprise building value across industries.</div>
+</div>
+
+<div>
+<div class="footer-title">Contact</div>
+<div class="footer-text">+880 01616 766155</div>
+<div class="footer-text">validiusbusiness@gmail.com</div>
+</div>
+
+<div>
+<div class="footer-title">Corporate Office</div>
+<div class="footer-text">Block #C, Road #17, House #67,<br>Level #3, Banani C/A,<br>Dhaka - 1213, Bangladesh</div>
+</div>
+
+</div>
+<div class="footer-bottom">© 2026 Validius Group. All Rights Reserved.</div>
+</footer>
+
+<script>
+const menuToggle=document.getElementById("menuToggle");
+const mainNav=document.getElementById("mainNav");
+
+menuToggle.addEventListener("click",()=>{
+const isOpen=mainNav.classList.toggle("open");
+menuToggle.setAttribute("aria-expanded",isOpen);
+menuToggle.textContent=isOpen?"✕":"☰";
+});
+</script>
+
+</body>
+</html>
+
