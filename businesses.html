@@ -1,1 +1,335 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Businesses | Validius Group</title>
+<meta name="description" content="Explore the diverse business interests of Validius Group across multiple industries.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#10243e;background:#fff;line-height:1.7}
+a{text-decoration:none;color:inherit}
+
+header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #e8edf2}
+.navbar{max-width:1250px;margin:auto;min-height:82px;padding:0 30px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:27px;font-weight:800;letter-spacing:2px;color:#0b1f3a}
+.logo span,.footer-logo span{color:#c8102e}
+nav{display:flex;align-items:center;gap:27px}
+nav a{font-size:14px;font-weight:600;color:#26384e;transition:.3s}
+nav a:hover,nav a.active{color:#c8102e}
+.menu-toggle{display:none;background:none;border:0;font-size:28px;color:#0b1f3a;cursor:pointer}
+
+.hero{
+min-height:440px;
+background:linear-gradient(100deg,rgba(5,23,44,.94),rgba(5,23,44,.70)),
+url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=85") center/cover;
+display:flex;align-items:center
+}
+.hero-content{max-width:1250px;width:100%;margin:auto;padding:80px 30px;color:#fff}
+.eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#ed4558;font-weight:700;margin-bottom:18px}
+.hero h1{font-size:clamp(42px,6vw,68px);line-height:1.12;max-width:850px;margin-bottom:22px}
+.hero p{font-size:18px;color:#d5dfeb;max-width:700px}
+
+.container{max-width:1200px;margin:auto;padding:85px 30px}
+.section-label{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#c8102e;font-weight:700;margin-bottom:14px}
+h2{font-size:clamp(30px,4vw,42px);line-height:1.2;color:#0b1f3a;margin-bottom:20px}
+.intro{text-align:center;max-width:850px;margin:auto}
+.intro p{color:#68778a;font-size:16px}
+
+.business-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+margin-top:45px
+}
+.business-card{
+background:#fff;
+border:1px solid #e7ebf0;
+border-radius:10px;
+overflow:hidden;
+transition:.3s;
+display:flex;
+flex-direction:column
+}
+.business-card:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 35px rgba(8,28,51,.09)
+}
+.business-image{height:230px;overflow:hidden;background:#edf1f5}
+.business-image img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.business-card:hover .business-image img{transform:scale(1.04)}
+.business-content{padding:30px;flex:1;display:flex;flex-direction:column}
+.business-number{font-size:12px;letter-spacing:2px;color:#c8102e;font-weight:700;margin-bottom:10px}
+.business-content h3{font-size:24px;color:#0b1f3a;margin-bottom:5px}
+.business-category{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#c8102e;font-weight:700;margin-bottom:15px}
+.business-content p{font-size:14px;color:#68778a;line-height:1.8}
+
+.future{
+background:#071b33;
+color:#fff;
+padding:85px 30px
+}
+.future-inner{max-width:1200px;margin:auto;text-align:center}
+.future h2{color:#fff}
+.future p{color:#bdc9d8;max-width:750px;margin:0 auto 25px}
+.future-box{
+max-width:800px;
+margin:35px auto 0;
+border:1px solid rgba(255,255,255,.2);
+border-radius:10px;
+padding:35px
+}
+.future-box h3{font-size:25px;margin-bottom:12px;color:#fff}
+.future-box .future-label{color:#ed4558;font-size:12px;letter-spacing:2px;font-weight:700;margin-bottom:12px}
+
+.closing{text-align:center;padding:85px 25px}
+.closing p{color:#68778a;max-width:700px;margin:0 auto 25px}
+.contact-button{display:inline-block;background:#0b1f3a;color:#fff;padding:14px 28px;border-radius:4px;font-size:13px;font-weight:700;transition:.3s}
+.contact-button:hover{background:#c8102e}
+
+footer{background:#071b33;color:#fff;padding:65px 30px 25px}
+.footer-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:55px}
+.footer-logo{font-size:25px;font-weight:800;letter-spacing:2px;margin-bottom:14px}
+.footer-tagline{color:#b8c5d4;margin-bottom:15px;font-size:14px}
+.footer-title{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:17px}
+.footer-text{font-size:14px;color:#b8c5d4;margin-bottom:9px}
+.footer-bottom{max-width:1200px;margin:40px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.15);font-size:12px;color:#91a1b3}
+
+@media(max-width:900px){
+nav{gap:13px}
+nav a{font-size:12px}
+}
+@media(max-width:700px){
+.navbar{min-height:70px;padding:0 20px}
+.logo{font-size:23px}
+.menu-toggle{display:block}
+nav{
+display:none;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#fff;
+padding:15px 22px 22px;
+flex-direction:column;
+align-items:flex-start;
+gap:0;
+border-bottom:1px solid #e8edf2;
+box-shadow:0 12px 20px rgba(0,0,0,.06)
+}
+nav.open{display:flex}
+nav a{font-size:14px;width:100%;padding:12px 0;border-bottom:1px solid #f0f2f5}
+.hero{min-height:390px}
+.hero-content{padding:65px 22px}
+.hero p{font-size:15px}
+.container{padding:65px 22px}
+.business-grid{grid-template-columns:1fr;gap:20px}
+.business-image{height:210px}
+.business-content{padding:25px}
+.future{padding:65px 22px}
+.future-box{padding:25px 20px}
+.footer-inner{grid-template-columns:1fr;gap:30px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="navbar">
+<a href="index.html" class="logo">VALIDIUS<span>.</span></a>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+<nav id="mainNav">
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="businesses.html" class="active">Our Businesses</a>
+<a href="sustainability.html">Sustainability</a>
+<a href="news.html">News & Insights</a>
+<a href="contact.html">Contact Us</a>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<div class="eyebrow">Our Businesses</div>
+<h1>Building Value.<br>Across Industries.</h1>
+<p>Exploring opportunities, developing businesses and creating long-term value across diverse industries.</p>
+</div>
+</section>
+
+<section class="container">
+<div class="intro">
+<div class="section-label">Our Business Portfolio</div>
+<h2>Diverse Interests. Shared Vision.</h2>
+<p>Validius Group operates across a range of business sectors, bringing together industry knowledge, strategic partnerships and a commitment to sustainable growth. Each venture represents our ambition to build meaningful value and explore new opportunities.</p>
+</div>
+
+<div class="business-grid">
+
+<div class="business-card">
+<div class="business-image">
+<img src="https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1000&q=85" alt="Gold and jewellery">
+</div>
+<div class="business-content">
+<div class="business-number">01 / JEWELLERY</div>
+<h3>Bengal Diamond</h3>
+<div class="business-category">Gold & Jewellery Manufacturing</div>
+<p>Focused on gold and jewellery manufacturing, Bengal Diamond aims to deliver quality craftsmanship, refined designs and lasting value in the jewellery industry.</p>
+</div>
+</div>
+
+<div class="business-card">
+<div class="business-image">
+<img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=85" alt="Diamond gemstone">
+</div>
+<div class="business-content">
+<div class="business-number">02 / GEMSTONE CERTIFICATION</div>
+<h3>SGL Lab Bangladesh</h3>
+<div class="business-category">Diamond Testing & Certification</div>
+<p>Dedicated to diamond testing, analysis and certification services, supporting transparency and confidence in the diamond and gemstone industry through internationally recognised testing standards.</p>
+</div>
+</div>
+
+<div class="business-card">
+<div class="business-image">
+<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=85" alt="Agricultural farmland">
+</div>
+<div class="business-content">
+<div class="business-number">03 / AGRICULTURE</div>
+<h3>Satu Agro</h3>
+<div class="business-category">Agro Processing & Agricultural Products</div>
+<p>Engaged in rice and paddy-related business activities, including rice bran crude oil and agricultural by-products, with plans to expand into refining and branded rice bran oil production.</p>
+</div>
+</div>
+
+<div class="business-card">
+<div class="business-image">
+<img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1000&q=85" alt="Automotive parts">
+</div>
+<div class="business-content">
+<div class="business-number">04 / AUTOMOTIVE</div>
+<h3>ZAC</h3>
+<div class="business-category">Automotive Parts Import & Distribution</div>
+<p>Focused on importing and distributing automotive parts from Germany, South Korea, China and India, connecting international manufacturers with the Bangladesh automotive market.</p>
+</div>
+</div>
+
+<div class="business-card">
+<div class="business-image">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Modern residential property">
+</div>
+<div class="business-content">
+<div class="business-number">05 / REAL ESTATE</div>
+<h3>Bengal Urban Homes Ltd.</h3>
+<div class="business-category">Real Estate Development</div>
+<p>Focused on residential and property development opportunities in key growth locations, including Bashundhara and Jolshiri, with a vision for quality living and future urban development.</p>
+</div>
+</div>
+
+<div class="business-card">
+<div class="business-image">
+<img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1000&q=85" alt="Industrial machinery">
+</div>
+<div class="business-content">
+<div class="business-number">06 / INDUSTRIAL SOLUTIONS</div>
+<h3>Lincon Traders</h3>
+<div class="business-category">Industrial Sewing Machinery</div>
+<p>Engaged in importing and distributing industrial sewing machinery, serving the garment and manufacturing industries with machinery solutions and related equipment.</p>
+</div>
+</div>
+
+<div class="business-card">
+<div class="business-image">
+<img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1000&q=85" alt="Electric vehicle charging">
+</div>
+<div class="business-content">
+<div class="business-number">07 / ELECTRIC MOBILITY</div>
+<h3>NEX DRIVE</h3>
+<div class="business-category">Electric Vehicles & Charging Infrastructure</div>
+<p>Working towards the future of electric mobility through EV solutions, charging infrastructure and related opportunities, supporting the transition towards cleaner transportation.</p>
+</div>
+</div>
+
+<div class="business-card">
+<div class="business-image">
+<img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85" alt="Modern healthcare">
+</div>
+<div class="business-content">
+<div class="business-number">08 / HEALTHCARE SERVICES</div>
+<h3>Medi Bridge</h3>
+<div class="business-category">Medical Tourism & Healthcare Facilitation</div>
+<p>Connecting patients from Bangladesh with international healthcare opportunities through medical tourism, treatment coordination and access to overseas healthcare services.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="future">
+<div class="future-inner">
+<div class="section-label">Looking Ahead</div>
+<h2>Exploring Tomorrow's Opportunities.</h2>
+<p>Our vision extends beyond established industries. We continue to explore emerging technologies, innovative business models and new opportunities that can contribute to long-term growth.</p>
+
+<div class="future-box">
+<div class="future-label">FUTURE INITIATIVE</div>
+<h3>Future Technology & Ventures</h3>
+<p>Exploring innovation, emerging technologies and forward-looking business opportunities to support the next phase of enterprise development.</p>
+</div>
+</div>
+</section>
+
+<section class="closing">
+<div class="section-label">Let's Build Together</div>
+<h2>Stronger Partnerships.<br>Greater Opportunities.</h2>
+<p>We welcome opportunities to connect with business partners, investors and organisations who share our vision for long-term growth and meaningful progress.</p>
+<a href="contact.html" class="contact-button">Connect With Us</a>
+</section>
+
+<footer>
+<div class="footer-inner">
+
+<div>
+<div class="footer-logo">VALIDIUS<span>.</span></div>
+<div class="footer-tagline">Strength on your side.</div>
+<div class="footer-text">A diversified global enterprise building value across industries.</div>
+</div>
+
+<div>
+<div class="footer-title">Contact</div>
+<div class="footer-text">+880 01616 766155</div>
+<div class="footer-text">validiusbusiness@gmail.com</div>
+</div>
+
+<div>
+<div class="footer-title">Corporate Office</div>
+<div class="footer-text">Block #C, Road #17, House #67,<br>Level #3, Banani C/A,<br>Dhaka - 1213, Bangladesh</div>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Validius Group. All Rights Reserved.
+</div>
+</footer>
+
+<script>
+const menuToggle=document.getElementById("menuToggle");
+const mainNav=document.getElementById("mainNav");
+
+menuToggle.addEventListener("click",()=>{
+const isOpen=mainNav.classList.toggle("open");
+menuToggle.setAttribute("aria-expanded",isOpen);
+menuToggle.textContent=isOpen?"✕":"☰";
+});
+</script>
+
+</body>
+</html>
+
