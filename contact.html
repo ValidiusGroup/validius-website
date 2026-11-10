@@ -1,1 +1,216 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Validius Group</title>
+<meta name="description" content="Contact Validius Group for business opportunities, strategic partnerships and investment proposals.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:#142238;line-height:1.6}
+a{text-decoration:none;color:inherit}
+header{height:82px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 7%;border-bottom:1px solid #e9edf2;position:sticky;top:0;z-index:100}
+.logo{font-size:27px;font-weight:800;letter-spacing:2px;color:#071426}
+.logo span{color:#e21d2d}
+nav{display:flex;align-items:center;gap:27px}
+nav a{font-size:13px;font-weight:600;color:#26364b;transition:.2s}
+nav a:hover,nav a.active{color:#e21d2d}
+.menu-btn{display:none;background:none;border:0;font-size:27px;color:#071426;cursor:pointer}
+.hero{background:#071426;color:#fff;padding:85px 7% 90px}
+.hero-inner{max-width:1150px;margin:auto}
+.eyebrow{color:#e21d2d;text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:700;margin-bottom:18px}
+.hero h1{font-size:clamp(36px,5vw,58px);line-height:1.12;max-width:700px;margin-bottom:22px}
+.hero h1 span{color:#e21d2d}
+.hero p{color:#c2cad5;font-size:16px;max-width:650px;line-height:1.9}
+.contact-section{padding:85px 7%;background:#f7f9fc}
+.contact-wrap{max-width:1150px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:start}
+.section-label{font-size:12px;letter-spacing:2.5px;color:#e21d2d;text-transform:uppercase;font-weight:700;margin-bottom:12px}
+.contact-info h2,.form-box h2{font-size:34px;line-height:1.25;color:#071426;margin-bottom:18px}
+.intro{color:#687588;font-size:15px;line-height:1.9;margin-bottom:35px}
+.info-item{padding:20px 0;border-bottom:1px solid #e0e5ec}
+.info-item h3{font-size:14px;color:#071426;margin-bottom:6px}
+.info-item p,.info-item a{font-size:14px;color:#657286;line-height:1.8;overflow-wrap:anywhere}
+.info-item a:hover{color:#e21d2d}
+.info-closing{margin-top:30px;font-size:22px;font-weight:700;color:#071426}
+.info-closing span{color:#e21d2d}
+.form-box{background:#fff;padding:38px;border:1px solid #e8edf3;box-shadow:0 12px 40px rgba(7,20,38,.06)}
+.form-box>p{font-size:14px;color:#687588;margin-bottom:25px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:13px;font-weight:700;color:#26364b;margin-bottom:8px}
+.form-group input,.form-group textarea{width:100%;padding:14px 15px;border:1px solid #dce2e9;border-radius:2px;font-family:inherit;font-size:14px;color:#142238;background:#fff;outline:none;transition:.2s}
+.form-group input:focus,.form-group textarea:focus{border-color:#e21d2d}
+.form-group textarea{height:135px;resize:vertical}
+.submit-btn{width:100%;padding:16px;background:#e21d2d;color:#fff;border:0;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:.2s}
+.submit-btn:hover{background:#bd1423}
+.form-note{font-size:11px;color:#8993a2;margin-top:13px;line-height:1.7}
+footer{background:#071426;color:#fff;padding:48px 7% 25px}
+.footer-inner{max-width:1150px;margin:auto;display:flex;justify-content:space-between;gap:35px;flex-wrap:wrap}
+.footer-brand .logo{color:#fff;display:inline-block;margin-bottom:12px}
+.footer-brand p{color:#aeb9c8;font-size:13px;max-width:300px}
+.footer-links h3{font-size:13px;margin-bottom:14px}
+.footer-links a{display:block;color:#aeb9c8;font-size:12px;margin:8px 0}
+.footer-links a:hover{color:#fff}
+.copyright{max-width:1150px;margin:35px auto 0;padding-top:20px;border-top:1px solid #253247;color:#8793a4;font-size:11px}
+@media(max-width:900px){
+header{padding:0 5%}
+nav{gap:15px}
+nav a{font-size:12px}
+.contact-wrap{gap:35px}
+.form-box{padding:28px}
+}
+@media(max-width:700px){
+header{height:72px}
+.logo{font-size:23px}
+.menu-btn{display:block}
+nav{display:none;position:absolute;top:72px;left:0;width:100%;background:#fff;padding:18px 6% 25px;box-shadow:0 10px 20px rgba(0,0,0,.08);flex-direction:column;align-items:flex-start;gap:0}
+nav.open{display:flex}
+nav a{width:100%;padding:12px 0;border-bottom:1px solid #edf0f4;font-size:14px}
+.hero{padding:65px 6% 70px}
+.hero h1{font-size:39px}
+.hero p{font-size:14px}
+.contact-section{padding:60px 6%}
+.contact-wrap{grid-template-columns:1fr;gap:40px}
+.contact-info h2,.form-box h2{font-size:29px}
+.form-box{padding:25px 20px}
+footer{padding:40px 6% 22px}
+.footer-inner{flex-direction:column;gap:30px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="index.html" class="logo">VALIDIUS<span>.</span></a>
+<button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+<nav id="mainNav">
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="businesses.html">Our Businesses</a>
+<a href="sustainability.html">Sustainability</a>
+<a href="news.html">News & Insights</a>
+<a href="contact.html" class="active">Contact Us</a>
+</nav>
+</header>
+
+<main>
+<section class="hero">
+<div class="hero-inner">
+<div class="eyebrow">Business Opportunities</div>
+<h1>Have an idea?<br><span>Let's build it.</span></h1>
+<p>We welcome new ideas, business opportunities, strategic partnerships and investment proposals. Connect with Validius Group to explore possibilities and create lasting value.</p>
+</div>
+</section>
+
+<section class="contact-section">
+<div class="contact-wrap">
+
+<div class="contact-info">
+<div class="section-label">Get in Touch</div>
+<h2>Let's start a conversation.</h2>
+<p class="intro">Whether you have a business proposal, partnership opportunity or an innovative idea, our team would be pleased to hear from you.</p>
+
+<div class="info-item">
+<h3>Business Enquiries</h3>
+<a href="mailto:validiusbusiness@gmail.com">validiusbusiness@gmail.com</a>
+</div>
+
+<div class="info-item">
+<h3>Phone</h3>
+<a href="tel:+8801616766155">+880 01616 766155</a>
+</div>
+
+<div class="info-item">
+<h3>Corporate Office</h3>
+<p>Block #C, Road #17, House #67, Level #3,<br>Banani C/A, Dhaka - 1213, Bangladesh.</p>
+</div>
+
+<div class="info-closing">Ideas. Partnerships.<br><span>Possibilities.</span></div>
+<p class="intro" style="margin-top:12px">We welcome conversations that have the potential to build meaningful businesses and long-term partnerships.</p>
+</div>
+
+<div class="form-box">
+<div class="section-label">Share Your Idea</div>
+<h2>Tell us about your opportunity.</h2>
+<p>Share your business idea, proposal or partnership opportunity with our team.</p>
+
+<form action="https://formsubmit.co/validiusbusiness@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="New Business Enquiry - Validius Group">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+
+<div class="form-group">
+<label for="fullname">Full Name *</label>
+<input type="text" id="fullname" name="Full Name" placeholder="Enter your full name" required>
+</div>
+
+<div class="form-group">
+<label for="company">Company / Organization</label>
+<input type="text" id="company" name="Company / Organization" placeholder="Enter company name">
+</div>
+
+<div class="form-group">
+<label for="email">Email Address *</label>
+<input type="email" id="email" name="Email Address" placeholder="Enter your email address" required>
+</div>
+
+<div class="form-group">
+<label for="phone">Phone Number</label>
+<input type="tel" id="phone" name="Phone Number" placeholder="Enter your phone number">
+</div>
+
+<div class="form-group">
+<label for="proposal">Your Idea / Proposal *</label>
+<textarea id="proposal" name="Idea / Proposal" placeholder="Tell us about your idea or proposal..." required></textarea>
+</div>
+
+<button type="submit" class="submit-btn">Submit Your Proposal</button>
+<p class="form-note">Your information will be used only to respond to your enquiry.</p>
+</form>
+</div>
+
+</div>
+</section>
+</main>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<a href="index.html" class="logo">VALIDIUS<span>.</span></a>
+<p>A diversified global enterprise focused on building value across industries.</p>
+</div>
+
+<div class="footer-links">
+<h3>Explore</h3>
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="businesses.html">Our Businesses</a>
+<a href="sustainability.html">Sustainability</a>
+<a href="news.html">News & Insights</a>
+<a href="contact.html">Contact Us</a>
+</div>
+
+<div class="footer-links">
+<h3>Contact</h3>
+<a href="mailto:validiusbusiness@gmail.com">validiusbusiness@gmail.com</a>
+<a href="tel:+8801616766155">+880 01616 766155</a>
+</div>
+</div>
+
+<div class="copyright">
+© 2026 Validius Group. All Rights Reserved. Strength on your side.
+</div>
+</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById('mainNav').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
+
